@@ -1,4 +1,6 @@
-transformers>=4.41.0
-datasets>=2.19.1
-evaluate>=0.4.1
-torch>=2.1.2
+flask
+transformers>=4.40.0
+datasets>=2.19.0
+accelerate>=0.26.0
+scikit-learn
+pandas
