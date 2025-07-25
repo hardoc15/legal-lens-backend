@@ -1,0 +1,10 @@
+*.pt
+*.zip
+*.csv
+__pycache__/
+*.ipynb
+cuad/
+legalbert_clean/
+legal-lens-ui/
+notebooks/
+models/legalbert_clean/

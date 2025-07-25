@@ -1,9 +1,11 @@
-from transformers import AutoTokenizer, AutoModelForSequenceClassification
+from transformers import AutoModelForSequenceClassification, AutoTokenizer
 import torch
 
 def predict(text, model_path="models/legalbert_clause_classifier"):
-    tokenizer = AutoTokenizer.from_pretrained(model_path)
-    model = AutoModelForSequenceClassification.from_pretrained(model_path)
+    HF_MODEL = "hardoc/legalbert-clause-classifier"
+
+    tokenizer = AutoTokenizer.from_pretrained(HF_MODEL)
+    model = AutoModelForSequenceClassification.from_pretrained(HF_MODEL)    
 
     inputs = tokenizer(text, return_tensors="pt", truncation=True, padding=True, max_length=256)
 

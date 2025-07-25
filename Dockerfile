@@ -1,12 +1,17 @@
 FROM python:3.10-slim
 
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
 WORKDIR /app
+
+# Install only essential system packages
+RUN apt-get update && apt-get install -y build-essential gcc && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
-
-EXPOSE 8080
-
-CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:8080", "src.api:app"]
+EXPOSE 8000
+CMD ["gunicorn", "-w", "2", "-b", "0.0.0.0:8000", "api:app"]
