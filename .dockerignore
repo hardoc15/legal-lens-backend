@@ -1,10 +1,25 @@
-*.pt
-*.zip
-*.csv
-__pycache__/
-*.ipynb
-cuad/
-legalbert_clean/
+# Ignore React frontend
 legal-lens-ui/
+node_modules/
+
+# Ignore notebooks and datasets
 notebooks/
-models/legalbert_clean/
+cuad/
+data/
+*.csv
+*.zip
+*.ipynb
+
+# Ignore models (we now load from Hugging Face)
+models/
+*.pt
+*.bin
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Git & virtual env
+.git/
+.venv/

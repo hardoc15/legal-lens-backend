@@ -1,12 +1,12 @@
-FROM python:3.10-slim
+FROM python:3.10-alpine
 
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
-# Install only essential system packages
-RUN apt-get update && apt-get install -y build-essential gcc && rm -rf /var/lib/apt/lists/*
+# Install basic build tools needed for some Python packages
+RUN apk add --no-cache build-base gcc libffi-dev
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
