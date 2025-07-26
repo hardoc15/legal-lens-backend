@@ -24,4 +24,4 @@ RUN pip install --upgrade pip && \
 COPY . .
 
 EXPOSE 8000
-CMD ["gunicorn", "-w", "2", "-b", "0.0.0.0:8000", "api:app"]
+CMD ["gunicorn", "-w", "2", "-b", "0.0.0.0:8000", "src.api:app"]
