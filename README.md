@@ -13,8 +13,3 @@ This is the backend service for **LegalLens AI**, a contract clause analysis pla
 - Supports multi-clause input for bulk analysis
 - CORS enabled for frontend integration
 - Easy model loading and inference
-
----
-
-## 📁 Project Structure
-
