@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: legal-lens-backend
+    env: docker
+    region: oregon
+    plan: free
+    branch: main
+    dockerfilePath: ./Dockerfile
+    buildCommand: ""
+    startCommand: ""
