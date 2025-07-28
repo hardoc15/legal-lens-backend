@@ -1,0 +1,7 @@
+models/legalbert_clause_classifier/*.bin
+models/legalbert_clause_classifier/*.safetensors
+models/legalbert_clause_classifier/checkpoint-*
+__pycache__/
+.venv/
+*.pyc
+models/legalbert_clause_classifier/*
