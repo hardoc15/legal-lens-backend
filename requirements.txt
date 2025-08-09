@@ -1,3 +1,5 @@
 flask
 flask-cors
 torch
+scikit-learn
+numpy
